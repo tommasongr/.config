@@ -1,0 +1,27 @@
+{
+	"concern": {
+		"prefix": "concern",
+		"body": [
+      "module $1",
+      "\textend ActiveSupport::Concern",
+      "",
+      "\t$2",
+      "end"
+		]
+	},
+  "params": {
+    "prefix": "params",
+    "body": [
+      "params[:${1:id}]"
+    ]
+  },
+  "test": {
+    "prefix": "test case",
+    "body": [
+      "test \"$1\" do",
+      "\t$1",
+      "end"
+    ],
+    "description": "Test case."
+  }
+}
