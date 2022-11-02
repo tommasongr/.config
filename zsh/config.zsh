@@ -30,11 +30,7 @@ export NVM_LAZY=1
 # rbenv source
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
-rbenv() {
-  eval "$(command rbenv init -)"
-  rbenv "$@"
-}
-# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # GPG
 export GPG_TTY=$(tty)
