@@ -4,6 +4,9 @@ local opt = vim.opt -- for conciseness
 opt.number = true
 opt.relativenumber = true
 
+-- color column
+opt.colorcolumn = "80"
+
 -- error bells
 opt.errorbells = false
 
