@@ -30,3 +30,6 @@ alias brewup="brew update; brew outdated; brew upgrade; brew cleanup"
 
 # Rails shortcut
 alias r="rails"
+
+# Bridgetown shortcut
+alias bt="bin/bridgetown"
