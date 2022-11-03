@@ -104,7 +104,7 @@ lspconfig["sumneko_lua"].setup({
 })
 
 -- configure ruby server
-lspconfig["solargraph"].setup({
+lspconfig["ruby_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
