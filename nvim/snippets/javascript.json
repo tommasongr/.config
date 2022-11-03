@@ -1,8 +1,14 @@
 {
-	"snip1": {
+	"log": {
 		"prefix": "log",
 		"body": [
 			"console.log($1)"
+		]
+	},
+	"console": {
+		"prefix": "console",
+		"body": [
+			"console.${1:log}($2)"
 		]
 	}
 }

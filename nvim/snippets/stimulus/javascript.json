@@ -1,0 +1,48 @@
+{
+  "controller": {
+    "prefix": "Stimulus Controller",
+    "body": [
+      "import { Controller } from \"@hotwired/stimulus\"",
+      "",
+      "export default class extends Controller {",
+      "\t${1:code here...}",
+      "}"
+    ]
+  },
+  "targets": {
+    "prefix": "Stimulus Targets",
+    "body": [
+      "static targets = [\"${1:targetName}\"]"
+    ]
+  },
+  "values": {
+    "prefix": "Stimulus Values",
+    "body": [
+      "static values = {\n\t${1:valueName}: ${2:Type}\n}"
+    ]
+  },
+  "values_defaults": {
+    "prefix": "Stimulus Values + Defaults",
+    "body": [
+      "static values = {",
+      "\t${1:valueName}: {",
+      "\t\ttype: ${2:Type},",
+      "\t\tdefault: ${3:value}",
+      "\t}",
+      "}"
+    ]
+  },
+  "classes": {
+    "prefix": "Stimulus Classes",
+    "body": [
+      "static classes = [\"${1:className}\"]"
+    ]
+  },
+  "dispatch": {
+    "prefix": "Stimulus Dispatch",
+    "body": [
+      "this.dispatch(\"${1:eventName}\", { detail: ${2:payloadObject} })"
+    ]
+  }
+}
+

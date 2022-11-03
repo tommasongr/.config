@@ -18,7 +18,20 @@
         "language": [
           "ruby"
         ],
-        "path": "./rails/rails.json"
+        "path": "./rails.json"
+      },
+      {
+        "language": [
+          "html",
+          "eruby"
+        ],
+        "path": "./stimulus/html.json"
+      },
+      {
+        "language": [
+          "javascript"
+        ],
+        "path": "./stimulus/javascript.json"
       }
     ]
   }
