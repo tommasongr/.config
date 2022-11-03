@@ -60,6 +60,7 @@ end
 lspconfig["html"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	filetypes = { "html", "eruby" },
 })
 
 -- configure typescript server with plugin
