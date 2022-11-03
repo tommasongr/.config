@@ -47,6 +47,7 @@ return packer.startup(function(use)
 
 	-- essential plugins
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
+	use("tpope/vim-ragtag") -- enhance vim-surround
 	use("vim-scripts/ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
 	-- commenting with gc
@@ -108,6 +109,12 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+
+	-- improve Rails support
+	use("tpope/vim-rails")
+
+	-- auto add end keyword
+	use("tpope/vim-endwise")
 
 	if packer_bootstrap then
 		require("packer").sync()
