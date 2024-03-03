@@ -1,16 +1,15 @@
-require("tommaso.plugins-setup")
-require("tommaso.core.options")
-require("tommaso.core.keymaps")
-require("tommaso.core.colorscheme")
-require("tommaso.plugins.comment")
-require("tommaso.plugins.nvim-tree")
-require("tommaso.plugins.lualine")
-require("tommaso.plugins.telescope")
-require("tommaso.plugins.nvim-cmp")
-require("tommaso.plugins.lsp.mason")
-require("tommaso.plugins.lsp.lspsaga")
-require("tommaso.plugins.lsp.lspconfig")
-require("tommaso.plugins.lsp.null-ls")
-require("tommaso.plugins.autopairs")
-require("tommaso.plugins.treesitter")
-require("tommaso.plugins.gitsigns")
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("config")
+require("lazy").setup("plugins")

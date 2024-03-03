@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Simple script to create a Bridgetown site with default settings
+
+if [ $# -eq 0 ]; then
+	echo "Provide a name for the site"
+else
+	bridgetown new $1 -t erb -c turbo,stimulus,tailwindcss
+fi

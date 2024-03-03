@@ -4,15 +4,15 @@
     "snippets": [
       {
         "language": [
-          "vue"
-        ],
-        "path": "./vue.json"
-      },
-      {
-        "language": [
           "javascript"
         ],
         "path": "./javascript.json"
+      },
+      {
+        "language": [
+          "ruby"
+        ],
+        "path": "./ruby.json"
       },
       {
         "language": [
@@ -22,16 +22,9 @@
       },
       {
         "language": [
-          "html",
           "eruby"
         ],
-        "path": "./stimulus/html.json"
-      },
-      {
-        "language": [
-          "javascript"
-        ],
-        "path": "./stimulus/javascript.json"
+        "path": "./erb.json"
       }
     ]
   }

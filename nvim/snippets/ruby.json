@@ -1,0 +1,62 @@
+{
+  "block": {
+    "prefix": "{",
+    "body": "{ |${1:e}| $0 "
+  },
+  "class": {
+    "prefix": "class",
+    "body": ["class $1", "\t$0", "end"]
+  },
+  "module": {
+    "prefix": "module",
+    "body": ["module $1", "\t$0", "end"]
+  },
+  "new method": {
+    "prefix": "def",
+    "body": ["def ${1:method_name}", "\t$0", "end"]
+  },
+  "do/end": {
+    "prefix": "do",
+    "body": ["do", "\t$0", "end"]
+  },
+  "do/end yield": {
+    "prefix": "doo",
+    "body": ["do |${1:yield}|", "\t$0", "end"]
+  },
+  "exception": {
+    "prefix": "begin",
+    "body": [
+      "begin",
+      "\t$1",
+      "rescue ${2:StandardError} => ${3:exception}",
+      "\t$0",
+      "end"
+    ]
+  },
+  "exception with ensure": {
+    "prefix": "begin ensure",
+    "body": [
+      "begin",
+      "\t$1",
+      "rescue ${2:StandardError} => ${3:exception}",
+      "\t$4",
+      "ensure",
+      "\t$0",
+      "end"
+    ]
+  },
+  "exception with else and ensure": {
+    "prefix": "begin else",
+    "body": [
+      "begin",
+      "\t$1",
+      "rescue ${2:StandardError} => ${3:exception}",
+      "\t$4",
+      "else",
+      "\t$5",
+      "ensure",
+      "\t$0",
+      "end"
+    ]
+  }
+}
