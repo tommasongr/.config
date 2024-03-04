@@ -16,7 +16,8 @@ export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agen
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR="vim"
 else
-  export EDITOR="nova --wait"
+  export EDITOR="nvim"
+  # export EDITOR="nova --wait"
 fi
 
 # Silently ignore all insecure files and directories
@@ -44,8 +45,5 @@ export GPG_TTY=$(tty)
 
 # VIM FZF
 export FZF_DEFAULT_COMMAND="fd --type f"
-
-# Heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/tommaso/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
 export HOMEBREW_EVAL_ALL=true

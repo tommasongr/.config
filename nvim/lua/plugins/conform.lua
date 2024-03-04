@@ -14,6 +14,7 @@ return {
         html = { "prettier" },
         json = { "prettier" },
         yaml = { "prettier" },
+        eruby = { "htmlbeautifier" },
         markdown = { "prettier" },
         ruby = { "rubocop" },
         lua = { "stylua" },

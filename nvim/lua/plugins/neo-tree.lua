@@ -41,6 +41,6 @@ return {
       },
     }
 
-    vim.keymap.set("n", "<c-b>", ":Neotree toggle float<CR>")
+    vim.keymap.set("n", "<c-p>", ":Neotree toggle float<CR>")
   end,
 }

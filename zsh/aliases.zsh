@@ -2,12 +2,10 @@
 
 # K next gen ls
 alias ka='k -a'
+alias la='ka --no-vcs'
 
 # Get week number
 alias week='date +%V'
-
-# List files with better info
-alias la='ls -all'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
