@@ -1,12 +1,5 @@
 ############### ALIASES ###############
 
-# K next gen ls
-alias ka='k -a'
-alias la='ka --no-vcs'
-
-# Get week number
-alias week='date +%V'
-
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
@@ -20,14 +13,22 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
-# Reload the shell
-alias reload="source ~/.zshrc"
-
 # Brew update
 alias brewup="brew update; brew outdated; brew upgrade; brew cleanup"
 
-# Rails shortcut
-alias r="rails"
+# Reload the shell
+alias reload="source ~/.zshrc"
 
-# Bridgetown shortcut
-alias bt="bin/bridgetown"
+# System
+alias ls="eza --color=always --long --git --no-user --no-permissions"
+alias la="ls -a"
+alias tree="eza --tree --level=3"
+alias c="clear"
+alias ..="cd .."
+
+# Neovim
+alias n="nvim"
+alias vim="nvim"
+
+# Zellij
+alias z="zellij"

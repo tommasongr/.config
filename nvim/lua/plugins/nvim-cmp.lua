@@ -14,7 +14,8 @@ return {
         return "make install_jsregexp"
       end)(),
       config = function()
-        require("luasnip.loaders.from_vscode").lazy_load { paths = "./snippets" }
+        require("luasnip.loaders.from_vscode").lazy_load { paths = "./snippets/languages" }
+        require("luasnip.loaders.from_vscode").lazy_load { paths = "./snippets/frameworks" }
       end,
     },
     "saadparwaiz1/cmp_luasnip",

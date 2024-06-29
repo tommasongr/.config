@@ -1,11 +1,13 @@
 return {
   "nvim-pack/nvim-spectre",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
+  build = false,
+  cmd = "Spectre",
+  opts = { open_cmd = "noswapfile vnew" },
+  -- stylua: ignore
+  keys = {
+    { "<leader>sr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" }
   },
-  config = function()
-    -- local spectre = require("spectre").setup({})
-
-    vim.keymap.set("n", "<leader>S", "<cmd>lua require('spectre').toggle()<cr>", { desc = "Toggle Spectre" })
-  end,
+  -- config = function()
+  --   vim.keymap.set("n", "<leader>S", "<cmd>lua require('spectre').toggle()<cr>", { desc = "Toggle Spectre" })
+  -- end,
 }

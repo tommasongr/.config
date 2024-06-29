@@ -1,0 +1,34 @@
+{
+  "Stimulus Controller": {
+    "prefix": "stimulus controller",
+    "body": "data-controller=\"${0:controller-identifier}\""
+  },
+  "Stimulus Action": {
+    "prefix": "stimulus action",
+    "body": "data-action=\"${1:event}->${2:controller-identifier}#${3:actionName}\""
+  },
+  "Stimulus Action + Option": {
+    "prefix": "stimulus action + option",
+    "body": "data-action=\"${1:event}->${2:controller-identifier}#${3:actionName}:${4:option}\""
+  },
+  "Stimulus Param": {
+    "prefix": "stimulus param",
+    "body": "data-${1:controller-identifier}-${2:param-name}-param=\"${3:param}\""
+  },
+  "Stimulus Target": {
+    "prefix": "stimulus target",
+    "body": "data-${1:controller-identifier}-target=\"${2:targetName}\""
+  },
+  "Stimulus Outlet": {
+    "prefix": "stimulus outlet",
+    "body": "data-${1:controller-identifier}-${2:outlet-name}-outlet=\"${3:css-selector}\""
+  },
+  "Stimulus Value": {
+    "prefix": "stimulus value",
+    "body": "data-${1:controller-identifier}-${2:value-name}-value=\"${3:value}\""
+  },
+  "Stimulus Class": {
+    "prefix": "stimulus class",
+    "body": "data-${1:controller-identifier}-${2:class-name}-class=\"${3:css-class}\""
+  }
+}

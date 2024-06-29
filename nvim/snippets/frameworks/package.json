@@ -6,25 +6,20 @@
         "language": [
           "javascript"
         ],
-        "path": "./javascript.json"
+        "path": "./hotwire/stimulus/javascript.json"
       },
       {
         "language": [
-          "ruby"
+          "html",
+          "eruby"
         ],
-        "path": "./ruby.json"
+        "path": "./hotwire/stimulus/html.json"
       },
       {
         "language": [
           "ruby"
         ],
         "path": "./rails.json"
-      },
-      {
-        "language": [
-          "eruby"
-        ],
-        "path": "./erb.json"
       }
     ]
   }
