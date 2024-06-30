@@ -4,12 +4,9 @@
 -- vim.g.netrw_browse_split = 0
 -- vim.g.netrw_winsize = 25
 
+-- Terminal
+vim.g.have_nerd_font = true
 vim.opt.termguicolors = true
-
--- [[ Setting options ]]
--- See `:help vim.opt`
--- NOTE: You can change these options as you wish!
---  For more options, you can see `:help option-list`
 
 -- Indentation
 vim.opt.expandtab = false
@@ -36,10 +33,10 @@ vim.opt.mouse = "a"
 
 -- Don't show the mode, since it's already in status line
 vim.opt.showmode = false
-
--- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
+
+-- Sync clipboard between OS and Neovim.
 vim.opt.clipboard = "unnamedplus"
 
 -- Enable break indent
@@ -55,7 +52,7 @@ vim.opt.smartcase = true
 -- Keep signcolumn on by default
 vim.opt.signcolumn = "yes"
 
--- Decrease update time
+-- Decrease update time and mapped sequence wait time
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 
