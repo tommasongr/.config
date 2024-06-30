@@ -16,7 +16,7 @@ keymap.set("n", "<leader>bo", "<cmd>BufOnly<cr>", { desc = "Delete all other buf
 keymap.set("n", "<c-d>", "<c-d>zz", { remap = true })
 keymap.set("n", "<c-u>", "<c-u>zz", { remap = true })
 
--- Navigation easier
+-- Easier navigation
 keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
