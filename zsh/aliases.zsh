@@ -33,3 +33,6 @@ alias ncleanup="rm -rf ~/.local/state/nvim/swap/"
 
 # Zellij
 alias z="zellij"
+
+# Lazy Git
+alias lg="lazygit"
