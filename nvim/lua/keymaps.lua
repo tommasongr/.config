@@ -33,10 +33,19 @@ keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
 
+-- NOTE: Quickfix
+keymap.set("n", "<leader>qo", "<cmd>copen<CR>", { desc = "Open quickfix list" })
+keymap.set("n", "<leader>qc", "<cmd>cclose<CR>", { desc = "Close quickfix list" })
+keymap.set("n", "<leader>qf", "<cmd>cfirst<CR>", { desc = "Jump to first quickfix list item" })
+keymap.set("n", "<leader>qf", "<cmd>clast<CR>", { desc = "Jump to last quickfix list item" })
+keymap.set("n", "<leader>qx", "<cmd>cfdo bd<CR>", { desc = "Close all buffers in quickfix list" })
+keymap.set("n", "<C-n>", "<cmd>cnext<CR>", { desc = "Go to next quickfix item" })
+keymap.set("n", "<C-p>", "<cmd>cprev<CR>", { desc = "Go to previous quickfix item" })
+
 -- NOTE: Diagnostic
 keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostics" })
 keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostics" })
-keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic quickfix list" })
+keymap.set("n", "<leader>d", vim.diagnostic.setloclist, { desc = "Open diagnostic quickfix list" })
 
 -- NOTE: Other
 keymap.set("n", "<leader>i", "gg=G<C-O>", { desc = "Indent file" })
