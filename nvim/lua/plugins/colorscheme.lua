@@ -13,20 +13,4 @@ return {
       vim.cmd.colorscheme "catppuccin"
     end,
   },
-  {
-    "oxfist/night-owl.nvim",
-  },
-  {
-    "savq/melange-nvim",
-  },
-  {
-    "kepano/flexoki-neovim",
-    name = "flexoki",
-  },
-  {
-    "rebelot/kanagawa.nvim",
-  },
-  {
-    "folke/tokyonight.nvim",
-  },
 }

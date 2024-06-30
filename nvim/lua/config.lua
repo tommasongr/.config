@@ -1,6 +1,3 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 -- Configure Netrw
 -- vim.g.netrw_banner = 0
 -- vim.g.netrw_liststyle = 3
@@ -26,6 +23,9 @@ vim.api.nvim_create_autocmd("Filetype", {
     vim.opt.expandtab = false
   end,
 })
+
+-- Backspace
+vim.opt.backspace = "indent,eol,start"
 
 -- Make line numbers default
 vim.opt.number = true
