@@ -3,7 +3,6 @@
 .DS_Store
 !.gitignore
 
-!/tmux
 !/zsh
 !/nvim
 !/karabiner
