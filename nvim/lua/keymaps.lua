@@ -26,12 +26,6 @@ keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window"
 keymap.set("n", "n", "nzzzv", { remap = true })
 keymap.set("n", "N", "Nzzzv", { remap = true })
 
--- NOTE: Panes
-keymap.set("n", "<leader>pv", "<C-w>v", { desc = "Split window vertically" })
-keymap.set("n", "<leader>ph", "<C-w>s", { desc = "Split window horizontally" })
-keymap.set("n", "<leader>pe", "<C-w>=", { desc = "Make panes equal size" })
-keymap.set("n", "<leader>px", "<cmd>close<CR>", { desc = "Close current pane" })
-
 -- NOTE: Tabs
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
