@@ -16,22 +16,6 @@ return {
   },
 
   {
-    "echasnovski/mini.comment",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-      "JoosepAlviste/nvim-ts-context-commentstring",
-    },
-    opts = {
-      options = {
-        custom_commentstring = function()
-          local ts_context_commentstring = require "ts_context_commentstring.internal"
-          return ts_context_commentstring.calculate_commentstring() or vim.bo.commentstring
-        end,
-      },
-    },
-  },
-
-  {
     "echasnovski/mini.pairs",
     event = "VeryLazy",
     opts = {},
