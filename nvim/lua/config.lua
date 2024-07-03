@@ -13,6 +13,7 @@ vim.opt.expandtab = false
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
+vim.opt.autoindent = true
 vim.api.nvim_create_autocmd("Filetype", {
   desc = "Don't convert tabs to spaces",
   group = vim.api.nvim_create_augroup("kickstart-spaces-tabs", { clear = true }),
@@ -97,3 +98,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.api.nvim_create_user_command("BufOnly", '%bdelete|edit #|normal `"', { desc = "Close all other buffers other than current one" })
+
+-- Set always ignored paths
+vim.opt.wildignore = { "node_modules/**" }
