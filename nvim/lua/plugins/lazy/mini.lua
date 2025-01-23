@@ -1,64 +1,85 @@
 return {
-  {
-    "echasnovski/mini.nvim",
-    config = function()
-      require("mini.statusline").setup {
-        use_icons = false,
-      }
-      require("mini.move").setup()
-    end,
-  },
+	"echasnovski/mini.nvim",
+	version = "*",
+	config = function()
+		-- NOTE Text editing
+		require("mini.ai").setup { n_lines = 100 }
+		require("mini.move").setup()
+		require("mini.pairs").setup()
+		require("mini.surround").setup()
 
-  {
-    "echasnovski/mini.ai",
-    event = { "BufReadPre", "BufNewFile" },
-    opts = { n_lines = 100 },
-  },
+		-- NOTE General worflow
+		require("mini.bufremove").setup()
+		local miniclue = require "mini.clue"
+		miniclue.setup {
+			triggers = {
+				-- Leader triggers
+				{ mode = "n", keys = "<Leader>" },
+				{ mode = "x", keys = "<Leader>" },
 
-  {
-    "echasnovski/mini.pairs",
-    event = "VeryLazy",
-    opts = {},
-    keys = {
-      {
-        "<leader>up",
-        function()
-          local Util = require "lazy.core.util"
-          vim.g.minipairs_disable = not vim.g.minipairs_disable
-          if vim.g.minipairs_disable then
-            Util.warn("Disabled auto pairs", { title = "Option" })
-          else
-            Util.info("Enabled auto pairs", { title = "Option" })
-          end
-        end,
-        desc = "Toggle auto pairs",
-      },
-    },
-  },
+				-- Built-in completion
+				{ mode = "i", keys = "<C-x>" },
 
-  {
-    "echasnovski/mini.bufremove",
-    keys = {
-      {
-        "<leader>bd",
-        function()
-          local bd = require("mini.bufremove").delete
-          if vim.bo.modified then
-            local choice = vim.fn.confirm(("Save changes to %q?"):format(vim.fn.bufname()), "&Yes\n&No\n&Cancel")
-            if choice == 1 then -- Yes
-              vim.cmd.write()
-              bd(0)
-            elseif choice == 2 then -- No
-              bd(0, true)
-            end
-          else
-            bd(0)
-          end
-        end,
-        desc = "Delete Buffer",
-      },
-			-- stylua: ignore
-			{ "<leader>bD", function() require("mini.bufremove").delete(0, true) end, desc = "Delete Buffer (Force)" },
-    },
-  },
+				-- `g` key
+				{ mode = "n", keys = "g" },
+				{ mode = "x", keys = "g" },
+
+				-- marks
+				{ mode = "n", keys = "'" },
+				{ mode = "n", keys = "`" },
+				{ mode = "x", keys = "'" },
+				{ mode = "x", keys = "`" },
+
+				-- registers
+				{ mode = "n", keys = '"' },
+				{ mode = "x", keys = '"' },
+				{ mode = "i", keys = "<c-r>" },
+				{ mode = "c", keys = "<c-r>" },
+
+				-- window commands
+				{ mode = "n", keys = "<c-w>" },
+
+				-- `z` key
+				{ mode = "n", keys = "z" },
+				{ mode = "x", keys = "z" },
+			},
+			clues = {
+				-- enhance this by adding descriptions for <leader> mapping groups
+				miniclue.gen_clues.builtin_completion(),
+				miniclue.gen_clues.g(),
+				miniclue.gen_clues.marks(),
+				miniclue.gen_clues.registers(),
+				miniclue.gen_clues.windows(),
+				miniclue.gen_clues.z(),
+			},
+		}
+		require("mini.diff").setup {
+			view = {
+				style = vim.go.number and "number" or "sign",
+				signs = {
+					add = "+",
+					change = "~",
+					delete = "-",
+				},
+			}
+		}
+		require("mini.files").setup()
+		vim.keymap.set("n", "-", function() MiniFiles.open(vim.api.nvim_buf_get_name(0), false) end, { desc = "Open file explorer" })
+		vim.keymap.set("n", "–", function() MiniFiles.open() end, { desc = "Open fresh file explorer" })
+
+		-- NOTE Appearance
+		require("mini.hipatterns").setup {
+			highlighters = {
+				fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
+				hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
+				todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
+				note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
+			},
+		}
+		require("mini.icons").setup()
+		MiniIcons.mock_nvim_web_devicons()
+		require("mini.notify").setup()
+		require("mini.starter").setup()
+		require("mini.statusline").setup { use_icons = false }
+	end
 }

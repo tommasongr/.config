@@ -23,6 +23,11 @@ return {
 					node_decremental = "<bs>",
 				},
 			},
+			textobjects = {
+				select = {
+					enable = false
+				}
+			}
 		}
 
 		autotag.setup {

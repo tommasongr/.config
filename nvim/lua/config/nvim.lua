@@ -54,8 +54,8 @@ vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
--- Keep signcolumn on by default
-vim.opt.signcolumn = "yes"
+-- Keep signcolumn off by default
+vim.opt.signcolumn = "no"
 
 -- Decrease update time and mapped sequence wait time
 vim.opt.updatetime = 250
