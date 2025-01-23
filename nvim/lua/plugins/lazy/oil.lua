@@ -20,6 +20,13 @@ return {
         show_hidden = true,
       },
       keymaps = {
+				["<C-h>"] = false,
+				["<M-h>"] = "actions.select_split",
+				["<C-l>"] = false,
+				["<M-l>"] = "actions.select_split",
+				["<C-s>"] = false,
+				["<C-v>"] = { "actions.select", opts = { vertical = true }, desc = "Open the entry in a vertical split" },
+				["<C-x>"] = { "actions.select", opts = { horizontal = true }, desc = "Open the entry in a horizontal split" },
         ["gd"] = {
           desc = "Toggle file detail view",
           callback = function()

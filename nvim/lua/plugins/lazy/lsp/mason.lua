@@ -13,13 +13,13 @@ return {
 
     mason_lspconfig.setup {
       ensure_installed = {
-        "tsserver",
+        "ts_ls",
         "html",
         "cssls",
         "tailwindcss",
         "lua_ls",
         "emmet_language_server",
-        "ruby_lsp",
+        -- "ruby_lsp",
       },
     }
 

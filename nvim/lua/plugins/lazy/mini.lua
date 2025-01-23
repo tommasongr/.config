@@ -12,7 +12,7 @@ return {
   {
     "echasnovski/mini.ai",
     event = { "BufReadPre", "BufNewFile" },
-    opts = { n_lines = 500 },
+    opts = { n_lines = 100 },
   },
 
   {

@@ -1,6 +1,3 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 local keymap = vim.keymap
 
 -- NOTE: UI
@@ -46,6 +43,10 @@ keymap.set("n", "<C-p>", "<cmd>cprev<CR>", { desc = "Go to previous quickfix ite
 keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostics" })
 keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostics" })
 keymap.set("n", "<leader>d", vim.diagnostic.setloclist, { desc = "Open diagnostic quickfix list" })
+
+-- NOTE: Terminal
+keymap.set("n", "<leader>p", "<cmd>Floaterminal<CR>", { desc = "Open prompt" })
+keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 
 -- NOTE: Other
 keymap.set("n", "<leader>i", "gg=G<C-O>", { desc = "Indent file" })

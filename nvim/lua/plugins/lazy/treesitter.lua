@@ -30,6 +30,12 @@ return {
 				enable_close = true,
 				enable_rename = true,
 				enable_close_on_slash = true,
+				filetypes = {
+					"html",
+					"xml",
+					"eruby",
+					"embedded_template",
+				},
 			},
 		}
 	end,

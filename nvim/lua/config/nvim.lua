@@ -4,22 +4,26 @@
 -- vim.g.netrw_browse_split = 0
 -- vim.g.netrw_winsize = 25
 
+-- Set leader
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- Terminal
 vim.g.have_nerd_font = true
 vim.opt.termguicolors = true
 
 -- Indentation
 vim.opt.expandtab = false
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 2
+vim.opt.tabstop = 3
+vim.opt.shiftwidth = 3
+vim.opt.softtabstop = 3
 vim.opt.autoindent = true
 vim.api.nvim_create_autocmd("Filetype", {
-  desc = "Don't convert tabs to spaces",
-  group = vim.api.nvim_create_augroup("kickstart-spaces-tabs", { clear = true }),
-  callback = function()
-    vim.opt.expandtab = false
-  end,
+	desc = "Don't convert tabs to spaces",
+	group = vim.api.nvim_create_augroup("kickstart-spaces-tabs", { clear = true }),
+	callback = function()
+		vim.opt.expandtab = false
+	end,
 })
 
 -- Backspace
@@ -83,6 +87,9 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- Do not include new line character in selection
+vim.opt.selection = "exclusive"
+
 -- [[ Basic Autocommands ]]
 --  See :help lua-guide-autocommands
 
@@ -90,14 +97,25 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight when yanking (copying) text",
-  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
 })
 
-vim.api.nvim_create_user_command("BufOnly", '%bdelete|edit #|normal `"', { desc = "Close all other buffers other than current one" })
+-- Configure builtin terminal
+vim.api.nvim_create_autocmd("TermOpen", {
+	desc = "Configure builtin terminal",
+	group = vim.api.nvim_create_augroup("configure-builtin-terminal", { clear = true }),
+	callback = function()
+		vim.opt.number = false
+		vim.opt.relativenumber = false
+	end,
+})
+
+vim.api.nvim_create_user_command("BufOnly", '%bdelete|edit #|normal `"',
+	{ desc = "Close all other buffers other than current one" })
 
 -- Set always ignored paths
 vim.opt.wildignore = { "node_modules/**" }
