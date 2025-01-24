@@ -12,7 +12,6 @@ return {
 			end,
 		},
 		"nvim-telescope/telescope-ui-select.nvim",
-		-- "nvim-tree/nvim-web-devicons",
 		"folke/todo-comments.nvim",
 	},
 	config = function()
@@ -41,14 +40,12 @@ return {
 		pcall(require("telescope").load_extension, "ui-select")
 
 		-- See `:help telescope.builtin`
-		vim.keymap.set("n", "<leader>sf", function()
-			builtin.git_files { show_untracked = true }
-		end, { desc = "Search git files" })
+		vim.keymap.set("n", "<leader>sf", function() builtin.git_files { show_untracked = true } end, { desc = "Search git files" })
 		vim.keymap.set("n", "<leader>sF", builtin.find_files, { desc = "Search all files" })
-		vim.keymap.set("n", "<leader>sr", builtin.oldfiles, { desc = "Search recent files" })
 		vim.keymap.set("n", "<leader>ss", builtin.live_grep, { desc = "Search string" })
 		vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "Search string under cursor" })
 		vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "Search existing buffers" })
 		vim.keymap.set("n", "<leader>st", "<cmd>TodoTelescope<cr>", { desc = "Search TODOs" })
+		vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "Search help" })
 	end,
 }

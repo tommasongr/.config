@@ -6,7 +6,23 @@ return {
 		require("mini.ai").setup { n_lines = 100 }
 		require("mini.move").setup()
 		require("mini.pairs").setup()
-		require("mini.surround").setup()
+		local surround = require("mini.surround")
+		surround.setup {
+			custom_surroundings = {
+				["%"] = {
+					input = { "%<%% ().-() %%%>" },
+					output = { left = "<% ", right = " %>" }
+				},
+				["="] = {
+					input = { "%<%%%= ().-() %%%>" },
+					output = { left = "<%= ", right = " %>" }
+				},
+				["#"] = {
+					input = { "%<%%%# ().-() %%%>" },
+					output = { left = "<%# ", right = " %>" }
+				}
+			}
+		}
 
 		-- NOTE General worflow
 		require("mini.bufremove").setup()
@@ -79,7 +95,6 @@ return {
 		require("mini.icons").setup()
 		MiniIcons.mock_nvim_web_devicons()
 		require("mini.notify").setup()
-		require("mini.starter").setup()
 		require("mini.statusline").setup { use_icons = false }
 	end
 }
