@@ -26,8 +26,8 @@ return {
 
 		-- NOTE General worflow
 		require("mini.bufremove").setup()
-		local miniclue = require "mini.clue"
-		miniclue.setup {
+		local clue = require "mini.clue"
+		clue.setup {
 			triggers = {
 				-- Leader triggers
 				{ mode = "n", keys = "<Leader>" },
@@ -61,12 +61,12 @@ return {
 			},
 			clues = {
 				-- enhance this by adding descriptions for <leader> mapping groups
-				miniclue.gen_clues.builtin_completion(),
-				miniclue.gen_clues.g(),
-				miniclue.gen_clues.marks(),
-				miniclue.gen_clues.registers(),
-				miniclue.gen_clues.windows(),
-				miniclue.gen_clues.z(),
+				clue.gen_clues.builtin_completion(),
+				clue.gen_clues.g(),
+				clue.gen_clues.marks(),
+				clue.gen_clues.registers(),
+				clue.gen_clues.windows(),
+				clue.gen_clues.z(),
 			},
 		}
 		require("mini.diff").setup {
