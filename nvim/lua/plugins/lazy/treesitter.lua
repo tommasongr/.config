@@ -6,14 +6,51 @@ return {
 		"windwp/nvim-ts-autotag",
 	},
 	config = function()
-		local treesitter = require "nvim-treesitter.configs"
-		local autotag = require "nvim-ts-autotag"
-
 		--- @diagnostic disable-next-line: missing-fields
-		treesitter.setup {
-			highlight = { enable = true },
+		require("nvim-treesitter.configs").setup {
+			ensure_installed = {
+				"c",
+				"lua",
+				"vim",
+				"vimdoc",
+				"query",
+				"markdown",
+				"markdown_inline",
+
+				"html",
+				"css",
+				"javascript",
+				"embedded_template",
+
+				"ruby",
+				"swift",
+
+				"xml",
+				"json",
+				"yaml",
+				"csv",
+
+				"bash",
+				"gitignore",
+				"gitattributes",
+				"editorconfig",
+				"dockerfile",
+				"jsdoc"
+			},
+			sync_install = false,
+			auto_install = false,
+			highlight = {
+				enable = true,
+				-- Disable slow treesitter highlight for large files
+				disable = function(_, buf)
+					local max_filesize = 100 * 1024 -- 100 KB
+					local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+					if ok and stats and stats.size > max_filesize then
+						return true
+					end
+				end,
+			},
 			indent = { enable = true },
-			auto_install = true,
 			incremental_selection = {
 				enable = true,
 				keymaps = {
@@ -30,7 +67,8 @@ return {
 			}
 		}
 
-		autotag.setup {
+		--- @diagnostic disable-next-line: missing-fields
+		require("nvim-ts-autotag").setup {
 			opts = {
 				enable_close = true,
 				enable_rename = true,
@@ -43,5 +81,5 @@ return {
 				},
 			},
 		}
-	end,
+	end
 }
