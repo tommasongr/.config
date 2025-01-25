@@ -81,7 +81,7 @@ return {
 		}
 		require("mini.files").setup()
 		vim.keymap.set("n", "<c-e>", function() MiniFiles.open(vim.api.nvim_buf_get_name(0), false) end, { desc = "Open file explorer" })
-		vim.keymap.set("n", "<c-E>", function() MiniFiles.open() end, { desc = "Open fresh file explorer" })
+		vim.keymap.set("n", "<c-x>", function() MiniFiles.open() end, { desc = "Open fresh file explorer" })
 
 		-- NOTE Appearance
 		require("mini.hipatterns").setup {
