@@ -60,11 +60,8 @@ return {
 					node_decremental = "<bs>",
 				},
 			},
-			textobjects = {
-				select = {
-					enable = false
-				}
-			}
+			-- Disable text objects in favor of mini.ai
+			textobjects = { select = { enable = false } }
 		}
 
 		--- @diagnostic disable-next-line: missing-fields
@@ -72,14 +69,8 @@ return {
 			opts = {
 				enable_close = true,
 				enable_rename = true,
-				enable_close_on_slash = true,
-				filetypes = {
-					"html",
-					"xml",
-					"eruby",
-					"embedded_template",
-				},
-			},
+				enable_close_on_slash = true
+			}
 		}
 	end
 }
