@@ -1,13 +1,12 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
-	event = { "BufReadPre", "BufNewFile" },
-	build = ":TSUpdate",
-	dependencies = {
-		"windwp/nvim-ts-autotag",
-	},
-	config = function()
-		--- @diagnostic disable-next-line: missing-fields
-		require("nvim-treesitter.configs").setup {
+	{
+		"nvim-treesitter/nvim-treesitter",
+		event = { "BufReadPre", "BufNewFile" },
+		build = ":TSUpdate",
+		dependencies = {
+			"windwp/nvim-ts-autotag",
+		},
+		opts = {
 			ensure_installed = {
 				"c",
 				"lua",
@@ -35,13 +34,12 @@ return {
 				"gitattributes",
 				"editorconfig",
 				"dockerfile",
-				"jsdoc"
+				"jsdoc",
 			},
 			sync_install = false,
 			auto_install = false,
 			highlight = {
 				enable = true,
-				-- Disable slow treesitter highlight for large files
 				disable = function(_, buf)
 					local max_filesize = 100 * 1024 -- 100 KB
 					local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
@@ -60,17 +58,18 @@ return {
 					node_decremental = "<bs>",
 				},
 			},
-			-- Disable text objects in favor of mini.ai
-			textobjects = { select = { enable = false } }
-		}
-
-		--- @diagnostic disable-next-line: missing-fields
-		require("nvim-ts-autotag").setup {
+			textobjects = { select = { enable = false } }, -- Disable text objects in favor of mini.ai
+		},
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		event = { "BufReadPre", "BufNewFile" },
+		opts = {
 			opts = {
 				enable_close = true,
 				enable_rename = true,
-				enable_close_on_slash = true
+				enable_close_on_slash = true,
 			}
 		}
-	end
+	}
 }

@@ -1,29 +1,13 @@
 return {
 	"williamboman/mason.nvim",
+	cmd = "Mason",
+	build = ":MasonUpdate",
 	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		{ "WhoIsSethDaniel/mason-tool-installer.nvim", config = function() end },
 	},
 	config = function()
-		local mason = require "mason"
-		local mason_lspconfig = require "mason-lspconfig"
-		local mason_tool_installer = require "mason-tool-installer"
-
-		mason.setup()
-
-		mason_lspconfig.setup {
-			ensure_installed = {
-				"ts_ls",
-				"html",
-				"cssls",
-				"tailwindcss",
-				"lua_ls",
-				"emmet_language_server",
-				-- "ruby_lsp",
-			},
-		}
-
-		mason_tool_installer.setup {
+		require("mason").setup()
+		require("mason-tool-installer").setup {
 			ensure_installed = {
 				"prettier",
 				"eslint_d",

@@ -14,19 +14,15 @@ return {
 		"folke/trouble.nvim", -- optional
 		"nvim-telescope/telescope.nvim"
 	},
-	config = function()
-		local chatgpt = require("chatgpt")
-
-		chatgpt.setup {
-			api_key_cmd = "op read op://Personal/ChatGPT.nvim/credential --no-newline",
-			openai_params = {
-				model = "gpt-4o-mini",
-			},
-			openai_edit_params = {
-				model = "gpt-4o-mini",
-			}
+	opts = {
+		api_key_cmd = "op read op://Personal/ChatGPT.nvim/credential --no-newline",
+		openai_params = {
+			model = "gpt-4o-mini",
+		},
+		openai_edit_params = {
+			model = "gpt-4o-mini",
 		}
-	end,
+	},
 	keys = {
 		{ "<leader>cc", "<cmd>ChatGPT<CR>", desc = "ChatGPT" },
 		{ "<leader>cs", "<cmd>ChatGPTCompleteCode<CR>", desc = "ChatGPT Suggest completion" },
