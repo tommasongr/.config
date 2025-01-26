@@ -3,7 +3,7 @@ return {
 	cmd = "Mason",
 	build = ":MasonUpdate",
 	dependencies = {
-		{ "WhoIsSethDaniel/mason-tool-installer.nvim", config = function() end },
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
 	config = function()
 		require("mason").setup()

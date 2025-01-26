@@ -60,7 +60,6 @@ return {
 					},
 				},
 			},
-			-- solargraph = {},
 		},
 	},
 	config = function(_, opts)
