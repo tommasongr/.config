@@ -1,7 +1,6 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
-		event = { "BufReadPre", "BufNewFile" },
 		build = ":TSUpdate",
 		dependencies = {
 			"windwp/nvim-ts-autotag",
@@ -60,10 +59,12 @@ return {
 			},
 			textobjects = { select = { enable = false } }, -- Disable text objects in favor of mini.ai
 		},
+		config = function(_, opts)
+			require("nvim-treesitter.configs").setup(opts)
+		end
 	},
 	{
 		"windwp/nvim-ts-autotag",
-		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			opts = {
 				enable_close = true,
