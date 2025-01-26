@@ -61,7 +61,7 @@ return {
 		},
 		config = function(_, opts)
 			require("nvim-treesitter.configs").setup(opts)
-		end
+		end,
 	},
 	{
 		"windwp/nvim-ts-autotag",
@@ -70,7 +70,7 @@ return {
 				enable_close = true,
 				enable_rename = true,
 				enable_close_on_slash = true,
-			}
-		}
-	}
+			},
+		},
+	},
 }
