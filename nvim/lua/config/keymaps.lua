@@ -7,17 +7,25 @@ keymap.set("n", "<leader>uL", "<cmd>set relativenumber!<cr>", { desc = "Toggle r
 keymap.set("n", "<leader>ul", "<cmd>set number!<cr>", { desc = "Toggle line numbers" })
 
 -- NOTE Buffers
-keymap.set("n", "<leader>bo", "<cmd>BufOnly<cr>", { desc = "Delete all other buffers" })
+keymap.set("n", "<Tab>", "<cmd>bnext<cr>")
+keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>")
+keymap.set("n", "<leader>bc", "<cmd>bd<cr>", { desc = "Close current buffers" })
+keymap.set("n", "<leader>bo", "<cmd>BufOnly<cr>", { desc = "Close all other buffers" })
 
 -- NOTE Movement
 keymap.set("n", "<c-d>", "<c-d>zz", { remap = true })
 keymap.set("n", "<c-u>", "<c-u>zz", { remap = true })
 
--- Easier navigation
+-- NOTE Easier window navigation
 keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+
+-- NOTE Visual editing
+keymap.set("v", "<leader>r", "\"hy:%s/<C-r>h//g<left><left>", { desc = "Replace all instances of selected text" })
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '>-2<CR>gv=gv")
 
 -- NOTE Searching
 keymap.set("n", "n", "nzzzv", { remap = true })
