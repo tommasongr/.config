@@ -54,7 +54,6 @@ keymap.set("n", "<leader>d", vim.diagnostic.setloclist, { desc = "Open diagnosti
 
 -- NOTE Terminal
 keymap.set("n", "<leader>p", "<cmd>Floaterminal<CR>", { desc = "Open prompt" })
--- keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 
 -- NOTE Other
 keymap.set("n", "<leader>i", "gg=G<C-O>", { desc = "Indent file" })
