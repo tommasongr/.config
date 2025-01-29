@@ -1,26 +1,26 @@
 {
-  "name": "snippets",
-  "contributes": {
-    "snippets": [
-      {
-        "language": [
-          "javascript"
-        ],
-        "path": "./hotwire/stimulus/javascript.json"
-      },
-      {
-        "language": [
-          "html",
-          "eruby"
-        ],
-        "path": "./hotwire/stimulus/html.json"
-      },
-      {
-        "language": [
-          "ruby"
-        ],
-        "path": "./rails.json"
-      }
-    ]
-  }
+	"name": "snippets",
+	"contributes": {
+		"snippets": [
+			{
+				"language": [
+					"javascript"
+				],
+				"path": "./hotwire/stimulus/javascript.json"
+			},
+			{
+				"language": [
+					"html",
+					"eruby"
+				],
+				"path": "./hotwire/stimulus/html.json"
+			},
+			{
+				"language": [
+					"ruby"
+				],
+				"path": "./rails.json"
+			}
+		]
+	}
 }

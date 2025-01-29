@@ -1,45 +1,45 @@
 {
-  "Stimulus Controller": {
-    "prefix": "stimulus controller",
-    "body": [
-      "import { Controller } from \"@hotwired/stimulus\"",
-      "",
-      "export default class extends Controller {",
-      "\t${0:code here...}",
-      "}"
-    ]
-  },
-  "Stimulus Targets": {
-    "prefix": "stimulus targets",
-    "body": ["static targets = [\"${0:targetName}\"]"]
-  },
-  "Stimulus Outlets": {
-    "prefix": "stimulus outlets",
-    "body": ["static outlets = [\"${0:outletName}\"]"]
-  },
-  "Stimulus Values": {
-    "prefix": "stimulus values",
-    "body": ["static values = {", "\t${1:valueName}: ${2:Type}", "}"]
-  },
-  "Stimulus Values + Defaults": {
-    "prefix": "stimulus values + defaults",
-    "body": [
-      "static values = {",
-      "\t${1:valueName}: {",
-      "\t\ttype: ${2:Type},",
-      "\t\tdefault: ${3:value}",
-      "\t}",
-      "}"
-    ]
-  },
-  "Stimulus Classes": {
-    "prefix": "stimulus classes",
-    "body": ["static classes = [\"${0:className}\"]"]
-  },
-  "Stimulus Dispatch": {
-    "prefix": "stimulus dispatch",
-    "body": [
-      "this.dispatch(\"${1:eventName}\", { detail: ${2:payloadObject} })"
-    ]
-  }
+	"Stimulus Controller": {
+		"prefix": "stimulus controller",
+		"body": [
+			"import { Controller } from \"@hotwired/stimulus\"",
+			"",
+			"export default class extends Controller {",
+			"\t${0:code here...}",
+			"}"
+		]
+	},
+	"Stimulus Targets": {
+		"prefix": "stimulus targets",
+		"body": ["static targets = [\"${0:targetName}\"]"]
+	},
+	"Stimulus Outlets": {
+		"prefix": "stimulus outlets",
+		"body": ["static outlets = [\"${0:outletName}\"]"]
+	},
+	"Stimulus Values": {
+		"prefix": "stimulus values",
+		"body": ["static values = {", "\t${1:valueName}: ${2:Type}", "}"]
+	},
+	"Stimulus Values + Defaults": {
+		"prefix": "stimulus values + defaults",
+		"body": [
+			"static values = {",
+			"\t${1:valueName}: {",
+			"\t\ttype: ${2:Type},",
+			"\t\tdefault: ${3:value}",
+			"\t}",
+			"}"
+		]
+	},
+	"Stimulus Classes": {
+		"prefix": "stimulus classes",
+		"body": ["static classes = [\"${0:className}\"]"]
+	},
+	"Stimulus Dispatch": {
+		"prefix": "stimulus dispatch",
+		"body": [
+			"this.dispatch(\"${1:eventName}\", { detail: ${2:payloadObject} })"
+		]
+	}
 }

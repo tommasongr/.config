@@ -1,14 +1,14 @@
 {
-  "ERB expression": {
-    "prefix": ["<%", "%", "ex"],
-    "body": "<% $1 %>"
-  },
-  "ERB insert": {
-    "prefix": ["<%=", "=", "in"],
-    "body": "<%= $1 %>"
-  },
-  "end": {
-    "prefix": "end",
-    "body": "<% end %>"
-  }
+	"ERB expression": {
+		"prefix": "exp",
+		"body": "<% $1 %>"
+	},
+	"ERB insert": {
+		"prefix": "ins",
+		"body": "<%= $1 %>"
+	},
+	"end": {
+		"prefix": "end",
+		"body": "<% end %>"
+	}
 }

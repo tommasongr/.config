@@ -1,25 +1,25 @@
 {
-  "name": "snippets",
-  "contributes": {
-    "snippets": [
-      {
-        "language": [
-          "javascript"
-        ],
-        "path": "./javascript.json"
-      },
-      {
-        "language": [
-          "ruby"
-        ],
-        "path": "./ruby.json"
-      },
-      {
-        "language": [
-          "eruby"
-        ],
-        "path": "./erb.json"
-      }
-    ]
-  }
+	"name": "snippets",
+	"contributes": {
+		"snippets": [
+			{
+				"language": [
+					"javascript"
+				],
+				"path": "./javascript.json"
+			},
+			{
+				"language": [
+					"ruby"
+				],
+				"path": "./ruby.json"
+			},
+			{
+				"language": [
+					"eruby"
+				],
+				"path": "./erb.json"
+			}
+		]
+	}
 }
