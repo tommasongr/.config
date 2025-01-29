@@ -2,47 +2,29 @@ return {
 	"saghen/blink.cmp",
 	event = "VeryLazy",
 	dependencies = {
-		"L3MON4D3/LuaSnip", version = "v2.*"
+		"L3MON4D3/LuaSnip",
+		version = "v2.*",
 	},
 	version = "*",
 	opts = {
 		keymap = { preset = "default" },
 		appearance = {
-			use_nvim_cmp_as_default = true,
+			use_nvim_cmp_as_default = false,
 			nerd_font_variant = "mono",
+		},
+		completion = {
+			menu = {
+				draw = {
+					treesitter = { "lsp" },
+				},
+			},
+			documentation = {
+				auto_show = true,
+				auto_show_delay_ms = 200,
+			},
 		},
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
-			providers = {
-				lsp = {
-					name = "lsp",
-					module = "blink.cmp.sources.lsp",
-					enabled = true,
-					score_offset = 40,
-				},
-				snippets = {
-					name = "snippets",
-					module = "blink.cmp.sources.snippets",
-					enabled = true,
-					score_offset = 30,
-					min_keyword_length = 2
-				},
-				path = {
-					name = "path",
-					module = "blink.cmp.sources.path",
-					enabled = true,
-					score_offset = 20,
-					fallbacks = { "snippets", "buffer" },
-				},
-				buffer = {
-					name = "buffer",
-					module = "blink.cmp.sources.buffer",
-					enabled = true,
-					score_offset = 10,
-					max_items = 3,
-					min_keyword_length = 4,
-				},
-			},
 		},
 		snippets = {
 			preset = "luasnip",
@@ -58,8 +40,8 @@ return {
 			end,
 			jump = function(direction)
 				require("luasnip").jump(direction)
-			end
-		}
+			end,
+		},
 	},
 	config = function(_, opts)
 		require("luasnip.loaders.from_vscode").lazy_load { paths = "./snippets/languages" }
