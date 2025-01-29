@@ -32,11 +32,11 @@ keymap.set("n", "n", "nzzzv", { remap = true })
 keymap.set("n", "N", "Nzzzv", { remap = true })
 
 -- NOTE Tabs
-keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
-keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
-keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
-keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
-keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
+keymap.set("n", "<c-t>o", "<cmd>tabnew<CR>", { desc = "Open new tab" })
+keymap.set("n", "<c-t>x", "<cmd>tabclose<CR>", { desc = "Close current tab" })
+keymap.set("n", "<c-t>n", "<cmd>tabn<CR>", { desc = "Go to next tab" })
+keymap.set("n", "<c-t>p", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
+keymap.set("n", "<c-t>f", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
 
 -- NOTE Quickfix
 keymap.set("n", "<leader>qo", "<cmd>copen<CR>", { desc = "Open quickfix list" })
@@ -53,7 +53,7 @@ keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostics" })
 keymap.set("n", "<leader>d", vim.diagnostic.setloclist, { desc = "Open diagnostic quickfix list" })
 
 -- NOTE Terminal
-keymap.set("n", "<leader>p", "<cmd>Floaterminal<CR>", { desc = "Open prompt" })
+keymap.set("n", "<leader>t", "<cmd>Floaterminal<CR>", { desc = "Open prompt" })
 
 -- NOTE Other
 keymap.set("n", "<leader>i", "gg=G<C-O>", { desc = "Indent file" })
