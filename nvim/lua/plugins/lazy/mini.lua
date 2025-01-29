@@ -6,22 +6,22 @@ return {
 		require("mini.ai").setup { n_lines = 100 }
 		require("mini.move").setup()
 		require("mini.pairs").setup()
-		local surround = require("mini.surround")
+		local surround = require "mini.surround"
 		surround.setup {
 			custom_surroundings = {
 				["%"] = {
 					input = { "%<%% ().-() %%%>" },
-					output = { left = "<% ", right = " %>" }
+					output = { left = "<% ", right = " %>" },
 				},
 				["="] = {
 					input = { "%<%%%= ().-() %%%>" },
-					output = { left = "<%= ", right = " %>" }
+					output = { left = "<%= ", right = " %>" },
 				},
 				["#"] = {
 					input = { "%<%%%# ().-() %%%>" },
-					output = { left = "<%# ", right = " %>" }
-				}
-			}
+					output = { left = "<%# ", right = " %>" },
+				},
+			},
 		}
 
 		-- NOTE General worflow
@@ -62,13 +62,13 @@ return {
 			},
 			clues = {
 				-- enhance this by adding descriptions for <leader> mapping groups
-				{ mode = "n", keys = "<leader>b", desc = "+Buffers" },
-				{ mode = "n", keys = "<leader>c", desc = "+ChatGPT" },
+				{ mode = "n", keys = "<leader>b",  desc = "+Buffers" },
+				{ mode = "n", keys = "<leader>c",  desc = "+ChatGPT" },
 				{ mode = "n", keys = "<leader>cr", desc = "+Run" },
-				{ mode = "n", keys = "<leader>q", desc = "+Quickfix" },
-				{ mode = "n", keys = "<leader>s", desc = "+Search" },
-				{ mode = "n", keys = "<leader>u", desc = "+UI" },
-				{ mode = "n", keys = "<c-t>", desc = "+Tabs" },
+				{ mode = "n", keys = "<leader>q",  desc = "+Quickfix" },
+				{ mode = "n", keys = "<leader>s",  desc = "+Search" },
+				{ mode = "n", keys = "<leader>u",  desc = "+UI" },
+				{ mode = "n", keys = "<c-t>",      desc = "+Tabs" },
 				clue.gen_clues.builtin_completion(),
 				clue.gen_clues.g(),
 				clue.gen_clues.marks(),
@@ -77,8 +77,8 @@ return {
 				clue.gen_clues.z(),
 			},
 			window = {
-				config = { border = "single", width = 50 }
-			}
+				config = { border = "single", width = 50 },
+			},
 		}
 		require("mini.diff").setup {
 			view = {
@@ -88,11 +88,15 @@ return {
 					change = "~",
 					delete = "-",
 				},
-			}
+			},
 		}
 		require("mini.files").setup()
-		vim.keymap.set("n", "<c-e>", function() MiniFiles.open(vim.api.nvim_buf_get_name(0), false) end, { desc = "Open file explorer" })
-		vim.keymap.set("n", "<c-x>", function() MiniFiles.open() end, { desc = "Open fresh file explorer" })
+		vim.keymap.set("n", "<c-e>", function()
+			MiniFiles.open(vim.api.nvim_buf_get_name(0), false)
+		end, { desc = "Open file explorer" })
+		vim.keymap.set("n", "<c-x>", function()
+			MiniFiles.open()
+		end, { desc = "Open fresh file explorer" })
 
 		-- NOTE Appearance
 		require("mini.hipatterns").setup {
@@ -107,5 +111,5 @@ return {
 		MiniIcons.mock_nvim_web_devicons()
 		require("mini.notify").setup()
 		require("mini.statusline").setup()
-	end
+	end,
 }

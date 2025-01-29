@@ -1,5 +1,3 @@
 {
-    "diagnostics.globals": [
-        "_lazygit_toggle"
-    ]
+	"diagnostics.globals": ["_lazygit_toggle"]
 }

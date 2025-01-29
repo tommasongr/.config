@@ -114,7 +114,8 @@ vim.api.nvim_create_autocmd("TermOpen", {
 	end,
 })
 
-vim.api.nvim_create_user_command("BufOnly", '%bdelete|edit #|normal `"', { desc = "Close all other buffers other than current one" })
+vim.api.nvim_create_user_command("BufOnly", '%bdelete|edit #|normal `"',
+	{ desc = "Close all other buffers other than current one" })
 
 -- Set always ignored paths
 vim.opt.wildignore = { "node_modules/**" }

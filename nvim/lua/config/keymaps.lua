@@ -23,7 +23,7 @@ keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window"
 keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- NOTE Visual editing
-keymap.set("v", "<leader>r", "\"hy:%s/<C-r>h//g<left><left>", { desc = "Replace all instances of selected text" })
+keymap.set("v", "<leader>r", '"hy:%s/<C-r>h//g<left><left>', { desc = "Replace all instances of selected text" })
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '>-2<CR>gv=gv")
 
