@@ -49,8 +49,8 @@ return {
 			emmet_language_server = {},
 
 			lua_ls = {
-				settings = {
-					Lua = {
+				Lua = {
+					settings = {
 						diagnostics = {
 							globals = { "vim" },
 						},

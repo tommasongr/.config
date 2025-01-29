@@ -54,6 +54,7 @@ return {
 
 				-- window commands
 				{ mode = "n", keys = "<c-w>" },
+				{ mode = "n", keys = "<c-t>" },
 
 				-- `z` key
 				{ mode = "n", keys = "z" },
@@ -61,6 +62,13 @@ return {
 			},
 			clues = {
 				-- enhance this by adding descriptions for <leader> mapping groups
+				{ mode = "n", keys = "<leader>b", desc = "+Buffers" },
+				{ mode = "n", keys = "<leader>c", desc = "+ChatGPT" },
+				{ mode = "n", keys = "<leader>cr", desc = "+Run" },
+				{ mode = "n", keys = "<leader>q", desc = "+Quickfix" },
+				{ mode = "n", keys = "<leader>s", desc = "+Search" },
+				{ mode = "n", keys = "<leader>u", desc = "+UI" },
+				{ mode = "n", keys = "<c-t>", desc = "+Tabs" },
 				clue.gen_clues.builtin_completion(),
 				clue.gen_clues.g(),
 				clue.gen_clues.marks(),
@@ -68,6 +76,9 @@ return {
 				clue.gen_clues.windows(),
 				clue.gen_clues.z(),
 			},
+			window = {
+				config = { border = "single", width = 50 }
+			}
 		}
 		require("mini.diff").setup {
 			view = {
