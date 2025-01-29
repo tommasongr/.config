@@ -1,14 +1,72 @@
 {
-	"ERB expression": {
-		"prefix": "exp",
-		"body": "<% $1 %>"
+	"expression": {
+		"prefix": "pe",
+		"body": "<% $0 %>",
+		"description": "ERB expression tag"
 	},
-	"ERB insert": {
-		"prefix": "ins",
-		"body": "<%= $1 %>"
+	"insert": {
+		"prefix": "pi",
+		"body": "<%= $0 %>",
+		"description": "ERB insert tag"
+	},
+	"comment": {
+		"prefix": "pc",
+		"body": "<%# $0 %>",
+		"description": "ERB comment tag"
+	},
+	"each": {
+		"prefix": "each",
+		"body": "<% ${1:@things}.each do |${2:thing}| %>\n\t$0\n<% end %>",
+		"description": "ERB each block"
+	},
+	"else": {
+		"prefix": "else",
+		"body": "<% else %>",
+		"description": "ERB else tag"
+	},
+	"elsif": {
+		"prefix": "elsif",
+		"body": "<% elsif ${1:true} %>",
+		"description": "ERB elsif tag"
 	},
 	"end": {
 		"prefix": "end",
-		"body": "<% end %>"
+		"body": "<% end %>",
+		"description": "ERB end tag"
+	},
+	"t": {
+		"prefix": "t",
+		"body": "<%= t(\"$0\") %>",
+		"description": "ERB translation tag"
+	},
+	"l": {
+		"prefix": "l",
+		"body": "<%= l($1, format: :${2:default}) %>",
+		"description": "ERB translation tag"
+	},
+	"ife": {
+		"prefix": "ife",
+		"body": "<% if $1 %>\n\t$2\n<% else %>\n\t$0\n<% end %>",
+		"description": "ERB if / else / end"
+	},
+	"if": {
+		"prefix": "if",
+		"body": "<% if $1 %>\n\t$0\n<% end %>",
+		"description": "ERB if / end"
+	},
+	"unless": {
+		"prefix": "unless",
+		"body": "<% unless $1 %>\n\t$0\n<% end %>",
+		"description": "ERB unless / end"
+	},
+	"link": {
+		"prefix": "link",
+		"body": "<%= link_to $1, $2 %>",
+		"description": "insert a rails view link_to helper"
+	},
+	"tag": {
+		"prefix": "tag",
+		"body": "<%= tag.${1:h1} $2 %>",
+		"description": "insert a rails view tag helper"
 	}
 }

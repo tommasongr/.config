@@ -88,7 +88,7 @@ vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Do not include new line character in selection
-vim.opt.selection = "exclusive"
+-- vim.opt.selection = "old"
 
 -- [[ Basic Autocommands ]]
 --  See :help lua-guide-autocommands
