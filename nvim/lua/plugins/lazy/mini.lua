@@ -91,12 +91,26 @@ return {
 			},
 		}
 		require("mini.files").setup()
-		vim.keymap.set("n", "<c-e>", function()
-			MiniFiles.open(vim.api.nvim_buf_get_name(0), false)
-		end, { desc = "Open file explorer" })
-		vim.keymap.set("n", "<c-x>", function()
-			MiniFiles.open()
-		end, { desc = "Open fresh file explorer" })
+		vim.keymap.set("n", "<c-e>", function() MiniFiles.open(vim.api.nvim_buf_get_name(0), false) end, { desc = "Open file explorer" })
+		vim.keymap.set("n", "<c-x>", function() MiniFiles.open() end, { desc = "Open fresh file explorer" })
+		vim.api.nvim_create_autocmd("User", {
+			pattern = "MiniFilesBufferCreate",
+			callback = function(args)
+				local b = args.data.buf_id
+
+				vim.keymap.set("n", "gx", function()
+					local fs_entry = MiniFiles.get_fs_entry()
+					if not fs_entry then
+						vim.notify("No file or directory under cursor", vim.log.levels.WARN)
+						return
+					end
+
+					local path = fs_entry.path
+
+					vim.system { "open", path }
+				end, { buffer = b, desc = "Open URL" })
+			end,
+		})
 
 		-- NOTE Appearance
 		require("mini.hipatterns").setup {
