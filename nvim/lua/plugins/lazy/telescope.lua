@@ -21,6 +21,7 @@ return {
 
 		telescope.setup {
 			defaults = {
+				file_ignore_patterns = { "node_modules", "heroicons", "vendor" },
 				path_display = { "smart" },
 				mappings = {
 					i = {
@@ -40,8 +41,8 @@ return {
 		pcall(require("telescope").load_extension, "ui-select")
 
 		-- See `:help telescope.builtin`
-		vim.keymap.set("n", "<leader>sf", function() builtin.git_files { show_untracked = true } end, { desc = "Search git files" })
-		vim.keymap.set("n", "<leader>sF", builtin.find_files, { desc = "Search all files" })
+		vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "Search all files" })
+		vim.keymap.set("n", "<leader>sF", function() builtin.git_files { show_untracked = true } end, { desc = "Search git files" })
 		vim.keymap.set("n", "<leader>ss", builtin.live_grep, { desc = "Search string" })
 		vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "Search string under cursor" })
 		vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "Search existing buffers" })

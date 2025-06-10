@@ -117,5 +117,12 @@ vim.api.nvim_create_autocmd("TermOpen", {
 vim.api.nvim_create_user_command("BufOnly", '%bdelete|edit #|normal `"',
 	{ desc = "Close all other buffers other than current one" })
 
+-- Configure custom filetypes
+vim.filetype.add({
+  extension = {
+    jbuilder = "ruby",
+  },
+})
+
 -- Set always ignored paths
 vim.opt.wildignore = { "node_modules/**" }
