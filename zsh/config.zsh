@@ -1,4 +1,5 @@
 ############### CONFIG ###############
+
 if [ ! -d "$HOME/.cache/zsh" ]; then
     mkdir -p $HOME/.cache/zsh
 fi
@@ -16,23 +17,12 @@ else
   # export EDITOR="nova --wait"
 fi
 
-# rbenv source
-eval "$(rbenv init - zsh)"
-
-# ruby-build
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3)"
-
-# NVM
-export NVM_AUTO_USE=true
-export NVM_LAZY_LOAD=true
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# mise
+eval "$(mise activate zsh)"
 
 # GPG
 export GPG_TTY=$(tty)
 
 # Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-export HOMEBREW_EVAL_ALL=true
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+# export HOMEBREW_EVAL_ALL=true
