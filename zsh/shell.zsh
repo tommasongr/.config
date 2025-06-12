@@ -1,4 +1,4 @@
-source ~/.config/zsh/config.zsh
+source ~/.config/zsh/shell/config.zsh
 
 # Zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -7,9 +7,7 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Oh my posh
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/base.yml)"
-fi
+eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/base.yml)"
 
 # Plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -50,6 +48,7 @@ zstyle ":completion:*" menu no
 zstyle ":fzf-tab:completion:cd:*" fzf-preview "ls --color $realpath"
 zstyle ":fzf-tab:complete:__zoxide:*" fzf-preview "ls --color $realpath"
 
-source ~/.config/zsh/aliases.zsh
-source ~/.config/zsh/integrations.zsh
-source ~/.config/zsh/functions.zsh
+# Load further configuration files
+source ~/.config/zsh/shell/aliases.zsh
+source ~/.config/zsh/shell/integrations.zsh
+source ~/.config/zsh/shell/functions.zsh
