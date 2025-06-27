@@ -27,6 +27,9 @@ alias c="clear"
 alias ..="cd .."
 alias config="cd ~/.config; nvim"
 
+# Ghostty
+alias settings="nvim ~/.config/ghostty/config"
+
 # Neovim
 alias n="nvim"
 alias vim="nvim"
