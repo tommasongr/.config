@@ -25,6 +25,7 @@ alias la="ls -a"
 alias tree="eza --tree --level=3"
 alias c="clear"
 alias ..="cd .."
+alias config="cd ~/.config; nvim"
 
 # Neovim
 alias n="nvim"
