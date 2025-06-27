@@ -1,7 +1,7 @@
 {
 	"Stimulus Controller": {
 		"prefix": "stimulus controller",
-		"body": "data-controller=\"${0:controller-identifier}\""
+		"body": "data-controller=\"${1:controller-identifier}\""
 	},
 	"Stimulus Action": {
 		"prefix": "stimulus action",

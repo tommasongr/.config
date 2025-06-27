@@ -5,17 +5,17 @@
 			"import { Controller } from \"@hotwired/stimulus\"",
 			"",
 			"export default class extends Controller {",
-			"\t${0:code here...}",
+			"\t${1:code here...}",
 			"}"
 		]
 	},
 	"Stimulus Targets": {
 		"prefix": "stimulus targets",
-		"body": ["static targets = [\"${0:targetName}\"]"]
+		"body": ["static targets = [\"${1:targetName}\"]"]
 	},
 	"Stimulus Outlets": {
 		"prefix": "stimulus outlets",
-		"body": ["static outlets = [\"${0:outletName}\"]"]
+		"body": ["static outlets = [\"${1:outletName}\"]"]
 	},
 	"Stimulus Values": {
 		"prefix": "stimulus values",
@@ -34,7 +34,7 @@
 	},
 	"Stimulus Classes": {
 		"prefix": "stimulus classes",
-		"body": ["static classes = [\"${0:className}\"]"]
+		"body": ["static classes = [\"${1:className}\"]"]
 	},
 	"Stimulus Dispatch": {
 		"prefix": "stimulus dispatch",
