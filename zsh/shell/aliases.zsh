@@ -33,3 +33,6 @@ alias ncleanup="rm -rf ~/.local/state/nvim/swap/"
 
 # Lazy Git
 alias lg="lazygit"
+
+# Lazy Docker
+alias lr="lazydocker"
