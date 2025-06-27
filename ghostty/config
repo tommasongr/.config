@@ -1,8 +1,8 @@
-font-family = "ComicCode Nerd Font"
+font-family = ComicCode Nerd Font
 font-size = 16
 
-theme = "catppuccin-mocha"
-window-colorspace = "display-p3"
+theme = catppuccin-mocha
+window-colorspace = display-p3
 
 background-opacity = 0.8
 background-blur = true
