@@ -4,6 +4,7 @@ return {
 		build = ":TSUpdate",
 		dependencies = {
 			"windwp/nvim-ts-autotag",
+			"OXY2DEV/markview.nvim"
 		},
 		opts = {
 			ensure_installed = {

@@ -63,8 +63,7 @@ return {
 			clues = {
 				-- enhance this by adding descriptions for <leader> mapping groups
 				{ mode = "n", keys = "<leader>b",  desc = "+Buffers" },
-				{ mode = "n", keys = "<leader>c",  desc = "+ChatGPT" },
-				{ mode = "n", keys = "<leader>cr", desc = "+Run" },
+				{ mode = "n", keys = "<leader>c",  desc = "+Code" },
 				{ mode = "n", keys = "<leader>q",  desc = "+Quickfix" },
 				{ mode = "n", keys = "<leader>s",  desc = "+Search" },
 				{ mode = "n", keys = "<leader>u",  desc = "+UI" },
@@ -80,7 +79,9 @@ return {
 				config = { border = "single", width = 50 },
 			},
 		}
-		require("mini.diff").setup {
+		local diff = require "mini.diff"
+		diff.setup {
+			source = diff.gen_source.none(),
 			view = {
 				style = vim.go.number and "number" or "sign",
 				signs = {
