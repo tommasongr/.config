@@ -191,6 +191,9 @@ automatically-unhide-macos-hidden-apps = true
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
 
+    # Terminal
+    alt-shift-ctrl-cmd-enter = "exec-and-forget osascript ~/.config/aerospace/terminal.scpt"
+
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
