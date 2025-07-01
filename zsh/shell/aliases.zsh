@@ -30,6 +30,9 @@ alias config="cd ~/.config; nvim"
 # Ghostty
 alias settings="cd ~/.config/ghostty; nvim ./config"
 
+# Zellij
+alias z="zellij"
+
 # Neovim
 alias n="nvim"
 alias vim="nvim"
