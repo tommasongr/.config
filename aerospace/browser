@@ -1,8 +1,8 @@
-if application "Safari" is running then
+if application "Chromium" is running then
 	set aerospace to "/opt/homebrew/bin/aerospace "
 	set workspace to do shell script aerospace & "list-workspaces --focused"
 
-	tell application "System Events" to tell process "Safari"
+	tell application "System Events" to tell process "Chromium"
 		click menu item "New Window" of menu "File" of menu bar 1
 		set frontmost to true
 	end tell
@@ -10,5 +10,5 @@ if application "Safari" is running then
 	do shell script aerospace & "move-node-to-workspace " & workspace
 	do shell script aerospace & "workspace " & workspace
 else
-	tell application "Safari" to activate
+	tell application "Chromium" to activate
 end if
