@@ -101,8 +101,8 @@ run= [ "layout floating" ]
 	alt-shift-ctrl-cmd-e = "exec-and-forget osascript ~/.config/aerospace/explorer"
 
 	# See: https://nikitabobko.github.io/AeroSpace/commands#layout
-	alt-shift-ctrl-cmd-slash = "layout tiles horizontal vertical"
-	alt-shift-ctrl-cmd-comma = "layout accordion horizontal vertical"
+	alt-slash = "layout tiles horizontal vertical"
+	alt-comma = "layout accordion horizontal vertical"
 
 	# See: https://nikitabobko.github.io/AeroSpace/commands#focus
 	alt-shift-ctrl-cmd-h = "focus left"
