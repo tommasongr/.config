@@ -43,3 +43,6 @@ alias lg="lazygit"
 
 # Lazy Docker
 alias lr="lazydocker"
+
+# Lazy SQL
+alias lq="lazysql"
