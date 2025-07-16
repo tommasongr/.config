@@ -79,9 +79,7 @@ return {
 				config = { border = "single", width = 50 },
 			},
 		}
-		local diff = require "mini.diff"
-		diff.setup {
-			source = diff.gen_source.none(),
+		require("mini.diff").setup {
 			view = {
 				style = vim.go.number and "number" or "sign",
 				signs = {
