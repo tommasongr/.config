@@ -128,3 +128,6 @@ vim.opt.wildignore:append({
 
 -- Diff
 vim.opt.diffopt:append("linematch:60")
+
+-- Diagnostics
+vim.diagnostic.config({ virtual_text = { current_line = true } })

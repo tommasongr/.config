@@ -1,4 +1,4 @@
-require("configs")
+require("config")
 require("auto_commands")
 require("plugins")
 require("plugins.custom")
