@@ -57,3 +57,4 @@ keymap.set("n", "<leader>t", "<cmd>Floaterminal<CR>", { desc = "Open prompt" })
 
 -- NOTE Other
 keymap.set("n", "<leader>i", "gg=G<C-O>", { desc = "Indent file" })
+keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
