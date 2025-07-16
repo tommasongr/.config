@@ -1,3 +1,9 @@
+-- ============================================================================
+-- Plugins
+--
+-- Created by Tommaso Negri on 16/07/2025.
+-- ============================================================================
+
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -22,6 +28,6 @@ require("lazy").setup {
 		{ import = "plugins.lazy" },
 	},
 	change_detection = { notify = false },
-	install = { colorscheme = { "habamax" } },
+	install = { colorscheme = { "catppuccin" } },
 	checker = { enabled = true },
 }

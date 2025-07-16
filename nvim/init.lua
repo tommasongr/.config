@@ -1,4 +1,5 @@
-require("config.nvim")
-require("config.lazy")
+require("configs")
+require("auto_commands")
+require("plugins")
 require("plugins.custom")
-require("config.keymaps")
+require("keymaps")
