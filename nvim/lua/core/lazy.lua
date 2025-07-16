@@ -25,7 +25,7 @@ vim.opt.runtimepath:prepend(lazypath)
 
 require("lazy").setup {
 	spec = {
-		{ import = "plugins.lazy" },
+		{ import = "plugins" },
 	},
 	change_detection = { notify = false },
 	install = { colorscheme = { "catppuccin" } },

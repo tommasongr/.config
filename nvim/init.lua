@@ -1,6 +1,6 @@
 require("config.options")
 require("core.lazy")
 require("core.lsp")
-require("plugins.custom")
+require("core.terminal")
 require("config.keymaps")
 require("config.autocmds")
