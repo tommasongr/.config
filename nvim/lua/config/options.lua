@@ -30,7 +30,7 @@ vim.opt.incsearch = true
 -- Visuals
 vim.g.have_nerd_font = true
 vim.opt.termguicolors = true
-vim.opt.signcolumn = "no"
+vim.opt.signcolumn = "auto"
 -- vim.opt.colorcolumn = "100"
 vim.opt.showmatch = true
 vim.opt.matchtime = 2
@@ -72,6 +72,7 @@ vim.opt.hidden = true
 vim.opt.errorbells = false
 vim.opt.backspace = "indent,eol,start"
 vim.opt.autochdir = false
+---@diagnostic disable-next-line: undefined-field
 vim.opt.iskeyword:append("-")
 vim.opt.path:append("**")
 vim.opt.selection = "exclusive"
@@ -128,6 +129,3 @@ vim.opt.wildignore:append({
 
 -- Diff
 vim.opt.diffopt:append("linematch:60")
-
--- Diagnostics
-vim.diagnostic.config({ virtual_text = { current_line = true } })
