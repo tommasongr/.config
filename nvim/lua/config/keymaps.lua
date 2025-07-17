@@ -30,8 +30,13 @@ keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window"
 
 -- NOTE Visual editing
 keymap.set("v", "<leader>r", '"hy:%s/<C-r>h//g<left><left>', { desc = "Replace all instances of selected text" })
-keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-keymap.set("v", "K", ":m '>-2<CR>gv=gv")
+keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
+keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
+keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
+keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
+keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
+keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
 
 -- NOTE Searching
 keymap.set("n", "n", "nzzzv", { remap = true })
