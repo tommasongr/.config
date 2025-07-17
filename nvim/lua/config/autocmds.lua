@@ -63,5 +63,24 @@ vim.api.nvim_create_autocmd("TermOpen", {
 	end,
 })
 
+-- Add LSP keymaps
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = augroup,
+	callback = function(event)
+		local map = function(keys, func, desc)
+			vim.keymap.set("n", keys, func, { buffer = event.buffer, desc = desc })
+		end
+
+		map("gD", vim.lsp.buf.declaration, "Go to declaration")
+		map("gd", vim.lsp.buf.definition, "Go to definition")
+
+		map("gra", vim.lsp.buf.code_action, "Code actions")
+		map("gri", vim.lsp.buf.implementation, "Go to implementation")
+		map("grn", vim.lsp.buf.rename, "Smart rename")
+		map("grr", vim.lsp.buf.references, "Show references")
+		map("grf", vim.diagnostic.open_float, "Open diagnostic float")
+	end
+})
+
 vim.api.nvim_create_user_command("BufOnly", '%bdelete|edit #|normal `"',
 	{ desc = "Close all other buffers other than current one" })
