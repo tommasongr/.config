@@ -1,3 +1,6 @@
+# Local bin
+export PATH="$HOME/.local/bin:$PATH"
+
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_EVAL_ALL=true
