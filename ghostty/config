@@ -12,3 +12,7 @@ window-colorspace = display-p3
 # Window
 window-height = 24
 window-width = 120
+
+# Quick terminal
+quick-terminal-position = center
+keybind = global:cmd+grave_accent=toggle_quick_terminal
