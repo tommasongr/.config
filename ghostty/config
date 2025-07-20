@@ -1,5 +1,6 @@
-font-family = ComicCode Nerd Font
+font-family = Comic Code
 font-size = 16
+adjust-cell-height = 15
 
 theme = catppuccin-mocha
 window-colorspace = display-p3
