@@ -20,7 +20,7 @@ alias brewup="brew update; brew outdated; brew upgrade; brew cleanup"
 alias reload="source ~/.zshrc"
 
 # System
-alias ls="eza --color=always --long --git --no-user --no-permissions"
+alias ls="eza --color=always --icons=always --long --git --no-user --no-permissions"
 alias la="ls -a"
 alias tree="eza --tree --level=3"
 alias c="clear"
