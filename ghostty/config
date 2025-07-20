@@ -1,12 +1,14 @@
+# Font
 font-family = Comic Code
 font-size = 16
 adjust-cell-height = 15
 
+# Theme & Colors
 theme = catppuccin-mocha
-window-colorspace = display-p3
-
 background-opacity = 0.8
 background-blur = true
+window-colorspace = display-p3
 
+# Window
 window-height = 24
 window-width = 120
