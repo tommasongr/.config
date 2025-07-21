@@ -46,3 +46,6 @@ alias lr="lazydocker"
 
 # Lazy SQL
 alias lq="lazysql"
+
+# Hours
+alias hours="hours -d ~/Cellar/Personal/hours.db"
