@@ -47,5 +47,8 @@ alias lr="lazydocker"
 # Lazy SQL
 alias lq="lazysql"
 
+# OMM (Tasks manager)
+alias tasks="omm"
+
 # Hours
 alias hours="hours -d ~/Cellar/Personal/hours.db"
