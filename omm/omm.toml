@@ -1,0 +1,7 @@
+db_path      = "~/Cellar/Personal/tasks.db"
+# tl_color     = "#b8bb26"
+# atl_color    = "#fabd2f"
+# title        = "work"
+# list_density = "spacious"
+# show_context = false
+# editor       = "vi -u NONE"
