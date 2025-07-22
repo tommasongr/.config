@@ -51,4 +51,4 @@ alias lq="lazysql"
 alias tasks="omm"
 
 # Hours
-alias hours="hours -d ~/Cellar/Personal/hours.db"
+alias hours="hours -d ~/Cellar/Personal/hours.db -t catppuccin-mocha"
