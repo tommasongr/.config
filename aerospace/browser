@@ -1,8 +1,8 @@
-if application "Chromium" is running then
+if application "Zen" is running then
 	set aerospace to "/opt/homebrew/bin/aerospace "
 	set workspace to do shell script aerospace & "list-workspaces --focused"
 
-	tell application "System Events" to tell process "Chromium"
+	tell application "System Events" to tell process "Zen"
 		click menu item "New Window" of menu "File" of menu bar 1
 		set frontmost to true
 	end tell
@@ -10,5 +10,5 @@ if application "Chromium" is running then
 	do shell script aerospace & "move-node-to-workspace " & workspace
 	do shell script aerospace & "workspace " & workspace
 else
-	tell application "Chromium" to activate
+	tell application "Zen" to activate
 end if
