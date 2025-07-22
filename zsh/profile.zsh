@@ -1,6 +1,9 @@
 # Local bin
 export PATH="$HOME/.local/bin:$PATH"
 
+# Local man
+export MANPATH="$HOME/local/share/man:$MANPATH"
+
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_EVAL_ALL=true
