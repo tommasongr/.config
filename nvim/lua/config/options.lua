@@ -30,7 +30,7 @@ vim.opt.incsearch = true
 -- Visuals
 vim.g.have_nerd_font = true
 vim.opt.termguicolors = true
-vim.opt.signcolumn = "auto"
+vim.opt.signcolumn = "no"
 -- vim.opt.colorcolumn = "100"
 vim.opt.showmatch = true
 vim.opt.matchtime = 2
